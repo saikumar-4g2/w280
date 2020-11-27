@@ -1,3 +1,5 @@
+#include<stdio.h>
+#include<conio.h>
 void drawBoundary(int,int,int*,int*,int*);
 void changeUserLocationOnButtonClick(int *,int *,char,int*,int*);
 int success(int A);
