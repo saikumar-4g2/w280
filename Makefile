@@ -12,6 +12,10 @@ src/jewel.c\
 TEST_SRC = src/jewel.c\
 test/test_jewel.c
 
+install:
+	cp conio.h /usr/include/
+
+
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
@@ -43,7 +47,8 @@ doc:
 test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
 	./$(TEST_OUTPUT)
-
+uninstall:
+	rm /usr/include/conio.h
 # Remove all the built files, invoke by `make clean`
 clean:
 	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
